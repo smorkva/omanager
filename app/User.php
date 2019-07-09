@@ -36,4 +36,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function Orders() {
+        return $this->hasMany('App\order');
+    }
+
+    public function isAdmin() {
+        return config('auth.admin') == $this->id;
+    }
 }

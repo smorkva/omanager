@@ -1,7 +1,7 @@
 <?php
 
 return [
-
+    'admin' => env('ADMIN_ID'),
     /*
     |--------------------------------------------------------------------------
     | Authentication Defaults
